@@ -1,0 +1,30 @@
+<a ng-href="#!/"><< back</a>
+<div ng-repeat="photo in photos" class="photo">
+  <div class="col-md-3">
+    <div class="thumbnail">
+        <div class="box">
+         <a ng-href="#!/albums/{{album_id}}/photo/{{photo.id}}">
+             <img src="{{photo.images[0].source}}">
+         </a>
+        </div>
+            <p><input type="checkbox" name="" checked="true">Select</p>
+
+    </div>
+  </div>
+</div>
+<div style="clear: both;"></div>
+<style type="text/css">
+
+.box {
+    position: relative;
+    height: 200px;
+    width: 190px;
+    border: 1px solid #ccc;
+}
+.box a>img {
+    height: 196px;
+}
+.thumbnail p {
+    margin-left: 20px
+}
+</style>

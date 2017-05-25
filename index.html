@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="testProject">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+
+    <script src="components.js"></script>
+    <script src="test.js"></script>
+  </head>
+  <body ng-controller="MainCtrl">
+  <div class="container">
+      <div class="header">
+        <h3 class="text-muted">Test Project</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>CNN</h1>
+           <tabs>
+                <pane title="Albums">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="well" style="padding-left: 50px; ">
+                                <div ng-view></div>
+                            </div>
+                        </div>
+                    </div>
+                </pane>
+                <pane title="Downloads">
+                    <h2>Page for download</h2>
+                </pane>
+            </tabs>
+      </div>
+
+      <div class="footer">
+        <p>Alex Nakonechny</p>
+      </div>
+    </div>
+
+</html>

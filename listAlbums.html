@@ -1,0 +1,16 @@
+<ul class="media-list">
+    <div class="media" ng-repeat="album in albums">
+        
+            <li class="media">
+                <a class="pull-left" ng-href="#!/albums/{{album.id}}">
+                  <img class="media-object" src="{{album.picture.data.url}}" style="width: 120px; height: 80px;">
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading"><a ng-href="#!/albums/{{album.id}}">{{album.name}}</a></h4>
+                  Count of photos: {{album.count}}<br>
+                  Created: {{album.created_time  | date:'dd/MM/yyyy'}}<br>
+                </div>
+            </li>
+        <hr>
+  </div>
+</ul>
