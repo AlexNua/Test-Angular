@@ -6,7 +6,7 @@ var app = angular.module('testProject', ['components', 'ngRoute'])
     .then(function (response) {
            $scope.albums = response.data.data;
         }, function (error) {
-            console.log(error);
+            alert('Token is deprecated. You must to have actual token for facebook access.');
         }
     );
 })
@@ -98,7 +98,7 @@ $routeProvider
     // Токен устаревает через несколько часов.
     // Для работы приложения запросите новый токен.
 
-    const access_token = 'EAACEdEose0cBAEEnQQce7j8kQQDDZA4rlWRWggWhphWO23ML3ZA9JuakJICEf2JQNtgbf0pHgbjOHx0vvbfgeK5NqkOyIcqBhLhhZCZCtEPJq9RrD2A8i34Wi7QnuwvlS5k8gJwtwAlWlyf2BDO80UAthSH3eheHH40EhgHtuqfG6ZB1G3XfE5pzZCh8JRJZCwZD';
+    const access_token = 'AACEdEose0cBAEEnQQce7j8kQQDDZA4rlWRWggWhphWO23ML3ZA9JuakJICEf2JQNtgbf0pHgbjOHx0vvbfgeK5NqkOyIcqBhLhhZCZCtEPJq9RrD2A8i34Wi7QnuwvlS5k8gJwtwAlWlyf2BDO80UAthSH3eheHH40EhgHtuqfG6ZB1G3XfE5pzZCh8JRJZCwZD';
     return {
         getAlbums: function(user_id) {
             var fields = 'name,count,picture,created_time';
